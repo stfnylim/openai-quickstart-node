@@ -22,6 +22,8 @@ export default function Home() {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
 
+
+
       setResult(data.result);
       setIngredientInput("");
     } catch(error) {
@@ -29,36 +31,11 @@ export default function Home() {
       console.error(error);
       alert(error.message);
     }
-    // async function onSubmit(event) {
-    // event.preventDefault();
-    // try {
-
-    //   const response =  openAI.generateText(generatePrompt(topic), model, 800)
-    //   .then(text => {
-    //       // Logging the generated text to the console
-    //       // In the future, this will be replaced to upload the returned blog text to a WordPress site using the WordPress REST API
-    //       console.log(text);
-    //   })
-    //   .catch(error => {
-    //       console.error(error);
-    //   });
-
-    //   const data = await response.json();
-    //   if (response.status !== 200) {
-    //     throw data.error || new Error(`Request failed with status ${response.status}`);
-    //   }
-
-    //   setResult(data.result);
-    //   setIngredientInput("");
-    // } catch(error) {
-    //   // Consider implementing your own error handling logic here
-    //   console.error(error);
-    //   alert(error.message);
-    // }
   }
 
   return (
-    <div>
+    // <div >
+    <div style={{backgroundColor: '#d7f1e5', margin:0}}>
       <Head>
         <title>Mai Meal Beta</title>
         {/* <link rel="icon" href="/dog.png" /> */}
@@ -85,5 +62,8 @@ export default function Home() {
           </div>
       </main>
     </div>
+
+
+    // </div>
   );
 }
